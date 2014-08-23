@@ -22,16 +22,16 @@
     self = [super init];
     
     if (self) {
-        self.refreshHandler = refreshHandler;
+        _refreshHandler = refreshHandler;
         
         // Create a UITableViewController for our internal use, and set its tableView property to point at the tableView passed into this method
-        self.tableViewController = [[UITableViewController alloc] init];
-        self.tableViewController.tableView = tableView;
+        _tableViewController = [[UITableViewController alloc] init];
+        _tableViewController.tableView = tableView;
         
-        self.refreshControl = [[UIRefreshControl alloc] init];
-        [self.refreshControl addTarget:self action:@selector(doRefresh) forControlEvents:UIControlEventValueChanged];
+        _refreshControl = [[UIRefreshControl alloc] init];
+        [_refreshControl addTarget:self action:@selector(doRefresh) forControlEvents:UIControlEventValueChanged];
 
-        self.tableViewController.refreshControl = self.refreshControl;
+        _tableViewController.refreshControl = self.refreshControl;
     }
     
     return self;
