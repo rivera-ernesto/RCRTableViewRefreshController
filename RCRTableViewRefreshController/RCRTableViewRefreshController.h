@@ -20,7 +20,7 @@
  @param tableView The @c UITableView to be augmented with a <tt>UIRefreshControl</tt>.
  @param refreshHandler A block to be executed when the refresh control is activated.
  */
-- (instancetype)initWithTableView:(UITableView *)tableView refreshHandler:(void (^) ())refreshHandler NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTableView:(UITableView *)tableView refreshHandler:(void (^) ())refreshHandler /*NS_DESIGNATED_INITIALIZER*/;
 
 /**
  Tell the refresh control that the refresh operation has ended.
