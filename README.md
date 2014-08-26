@@ -51,6 +51,15 @@ You may also want to reload the table data at this point, if you haven't already
     [self.tableView reloadData];
 ```
 
+Note: as these last two steps update the UI, they should be called from the main queue. For example:
+
+```objc
+dispatch_async(dispatch_get_main_queue(), ^{
+    [self.refreshController endRefreshing];
+    [self.tableView reloadData];       
+});
+```
+
 ## Sample Project
 
 A sample project demonstrating a working example of the refresh controller can be found in the `RCRTableViewRefreshControllerSample` folder.

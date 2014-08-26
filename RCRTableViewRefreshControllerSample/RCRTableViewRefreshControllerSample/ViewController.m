@@ -59,11 +59,16 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
 }
 
 - (void)dataHasRefreshed {
-    // At some point later, when we're done getting our new data, tell our refresh controller to end refreshing
-    [self.refreshController endRefreshing];
-    
-    // Finally get the table view to reload its data
-    [self.tableView reloadData];
+    // Ensure we're on the main queue as we'll be updating the UI (not strictly necessary for this example, but will likely be essential in less trivial scenarios and so is included for illustrative purposes)
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+        // At some point later, when we're done getting our new data, tell our refresh controller to end refreshing
+        [self.refreshController endRefreshing];
+        
+        // Finally get the table view to reload its data
+        [self.tableView reloadData];
+        
+    });
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
