@@ -5,7 +5,7 @@ A simple workaround for using the standard iOS `UIRefreshControl` with a regular
 
 ## What it is
 
-Suppose you have an existing project, with an existing table view, managed by an existing view controller. Maybe your view controller is a subclass of a custom view controller that you use throughout your project.
+Suppose you have an existing project, with an existing table view, managed by an existing view controller (that's not a subclass of `UITableViewController`). Maybe your view controller is a subclass of a custom view controller that you use throughout your project.
 
 Then suppose a requirement arises: your table view needs to support 'pull to refresh'.
 
