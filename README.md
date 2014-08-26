@@ -29,7 +29,7 @@ Add a property for the refresh controller to your table's associated view contro
 @property (nonatomic, strong) RCRTableViewRefreshController *refreshController;
 ```
 
-Then, in your `viewDidLoad` method, initialize the refresh controller, passing it a reference to your table view, and a block of code to call when the user pulls to refresh. For example:
+Then, in your `viewDidLoad` method, initialize the refresh controller, passing it a reference to your table view, and a block of code to call when the user pulls to refresh. For example, assuming you have a property named `tableView` for your table:
 
 ```objc
 // Setup our refresh controller, with our table view and some code to perform when the user pulls down
@@ -45,7 +45,7 @@ Finally, when you're done refreshing data (this may occur via a callback of some
     [self.refreshController endRefreshing];
 ```
     
-You may also want to reload the table data at this point, if you haven't already taken measures to do this. Assuming you have a property named `tableView`:
+You may also want to reload the table data at this point, if you haven't already taken measures to do this. Again, assuming you have a property named `tableView`:
 
 ```objc
     [self.tableView reloadData];
