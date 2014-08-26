@@ -15,7 +15,7 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSMutableArray *data;
+@property (nonatomic, strong) NSMutableArray *data;
 
 // Here's our refresh controller
 @property (nonatomic, strong) RCRTableViewRefreshController *refreshController;
