@@ -54,7 +54,12 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
         [self.data exchangeObjectAtIndex:randomInt1 withObjectAtIndex:randomInt2];
     }
     
-    // At some point later, when we're done getting our new data (which could occur in a webservice callback), tell our refresh controller to end refreshing
+    // In practice, the following method may be executed via a callback - upon receiving web service data, for example
+    [self dataHasRefreshed];
+}
+
+- (void)dataHasRefreshed {
+    // At some point later, when we're done getting our new data, tell our refresh controller to end refreshing
     [self.refreshController endRefreshing];
     
     // Finally get the table view to reload its data
