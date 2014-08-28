@@ -17,7 +17,7 @@ Assuming you'd prefer not to rewrite your code and possibly break your view cont
 
 `RCRTableViewRefreshController` depends on Xcode 5 and higher (although note that the sample project is designed for Xcode 6 and will need modifying to work with Xcode 5).
 
-Code has currently been tested with iOS 8.0 but `RCRTableViewRefreshController` should also work with 7.0 and 7.1.
+`RCRTableViewRefreshController` has been tested with iOS 7 and iOS 8 (note that the sample project has been designed for 8, but will run on 7).
 
 All code uses ARC.
 
