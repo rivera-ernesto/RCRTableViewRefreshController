@@ -27,7 +27,13 @@ First, add the `RCRTableViewRefreshController` folder and code to your project.
 
 Then, one way to use the refresh controller would be as follows.
 
-Add a property for the refresh controller to your table's associated view controller:
+Import `RCRTableViewRefreshController.h` into your table's associated view controller:
+
+```objc
+#import "RCRTableViewRefreshController.h"
+```
+
+Next, add a property for the refresh controller:
 
 ```objc
 @property (nonatomic, strong) RCRTableViewRefreshController *refreshController;
