@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RCRTableViewRefreshController"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "A simple workaround for using the standard iOS UIRefreshControl with a regular UITableView without needing a UITableViewController."
   s.homepage         = "https://github.com/robinsonrc/RCRTableViewRefreshController"
   s.license          = { :type => 'MIT', :file => 'LICENSE'  }
