@@ -74,6 +74,10 @@ dispatch_async(dispatch_get_main_queue(), ^{
 
 A sample project demonstrating a working example of the refresh controller can be found in the `RCRTableViewRefreshControllerSample` folder.
 
+## API Docs
+
+The [latest API documentation](http://cocoadocs.org/docsets/RCRTableViewRefreshController/) can be found on CocoaDocs.
+
 ## License
 
 MIT License (see `LICENSE` in the root of the repository).
