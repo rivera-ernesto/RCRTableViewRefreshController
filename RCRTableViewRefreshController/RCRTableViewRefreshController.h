@@ -12,7 +12,7 @@
 
  For the record, this is a non-ideal way of adding a refresh control to a table view. The proper, correct way to do it is by using a <tt>UITableViewController</tt> class rather than working with a <tt>UITableView</tt> directly. However, this is not always practical - particularly when adding a refresh control to an existing table view, with an existing class hierarchy.
  */
-@interface RCRTableViewRefreshController : NSObject
+@interface RCRTableViewRefreshController : UIRefreshControl
 
 /**
  Designated initializer.
@@ -23,8 +23,9 @@
 - (instancetype)initWithTableView:(UITableView *)tableView refreshHandler:(void (^) ())refreshHandler /*NS_DESIGNATED_INITIALIZER*/;
 
 /**
- Tell the refresh control that the refresh operation has ended.
+ A block to be executed when the refresh control is activated.
  */
-- (void)endRefreshing;
+@property (nonatomic, copy) void (^refreshHandler) ();
 
 @end
+
