@@ -13,13 +13,12 @@
 		679A634319A88A84005841DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A634219A88A84005841DD /* ViewController.m */; };
 		679A634619A88A84005841DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679A634419A88A84005841DD /* Main.storyboard */; };
 		679A634819A88A84005841DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A634719A88A84005841DD /* Images.xcassets */; };
-		E5E2C9E01A16164C00D90500 /* UIViewController+RCRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2C9DF1A16164C00D90500 /* UIViewController+RCRRefreshControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6736B1D919A88C13005070CB /* RCRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRRefreshControl.h; sourceTree = "<group>"; };
 		6736B1DA19A88C13005070CB /* RCRRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRRefreshControl.m; sourceTree = "<group>"; };
-		679A633719A88A84005841DD /* RCRTableViewRefreshControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCRTableViewRefreshControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		679A633719A88A84005841DD /* RCRRefreshControlSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCRRefreshControlSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679A633B19A88A84005841DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		679A633C19A88A84005841DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		679A633E19A88A84005841DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +66,7 @@
 		679A633819A88A84005841DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				679A633719A88A84005841DD /* RCRTableViewRefreshControllerSample.app */,
+				679A633719A88A84005841DD /* RCRRefreshControlSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		679A633619A88A84005841DD /* RCRTableViewRefreshControllerSample */ = {
+		679A633619A88A84005841DD /* RCRRefreshControlSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 679A635719A88A85005841DD /* Build configuration list for PBXNativeTarget "RCRTableViewRefreshControllerSample" */;
+			buildConfigurationList = 679A635719A88A85005841DD /* Build configuration list for PBXNativeTarget "RCRRefreshControlSample" */;
 			buildPhases = (
 				679A633319A88A84005841DD /* Sources */,
 				679A633419A88A84005841DD /* Frameworks */,
@@ -111,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = RCRTableViewRefreshControllerSample;
+			name = RCRRefreshControlSample;
 			productName = RCRTableViewRefreshControllerSample;
-			productReference = 679A633719A88A84005841DD /* RCRTableViewRefreshControllerSample.app */;
+			productReference = 679A633719A88A84005841DD /* RCRRefreshControlSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 679A633219A88A84005841DD /* Build configuration list for PBXProject "RCRTableViewRefreshControllerSample" */;
+			buildConfigurationList = 679A633219A88A84005841DD /* Build configuration list for PBXProject "RCRRefreshControlSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -143,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				679A633619A88A84005841DD /* RCRTableViewRefreshControllerSample */,
+				679A633619A88A84005841DD /* RCRRefreshControlSample */,
 			);
 		};
 /* End PBXProject section */
@@ -165,7 +164,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5E2C9E01A16164C00D90500 /* UIViewController+RCRRefreshControl.m in Sources */,
 				679A634319A88A84005841DD /* ViewController.m in Sources */,
 				679A634019A88A84005841DD /* AppDelegate.m in Sources */,
 				679A633D19A88A84005841DD /* main.m in Sources */,
@@ -272,7 +270,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = RCRTableViewRefreshControllerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RCRRefreshControlSample;
 			};
 			name = Debug;
 		};
@@ -283,14 +281,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = RCRTableViewRefreshControllerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RCRRefreshControlSample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		679A633219A88A84005841DD /* Build configuration list for PBXProject "RCRTableViewRefreshControllerSample" */ = {
+		679A633219A88A84005841DD /* Build configuration list for PBXProject "RCRRefreshControlSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				679A635519A88A85005841DD /* Debug */,
@@ -299,7 +297,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		679A635719A88A85005841DD /* Build configuration list for PBXNativeTarget "RCRTableViewRefreshControllerSample" */ = {
+		679A635719A88A85005841DD /* Build configuration list for PBXNativeTarget "RCRRefreshControlSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				679A635819A88A85005841DD /* Debug */,
