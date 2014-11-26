@@ -1,5 +1,5 @@
 //
-//  RCRTableViewRefreshController.h
+//  RCRRefreshControl.h
 //
 //  Created by Rich Robinson on 02/08/2014.
 //  Copyright (c) 2014 Rich Robinson. All rights reserved.
@@ -12,7 +12,7 @@
 
  For the record, this is a non-ideal way of adding a refresh control to a table view. The proper, correct way to do it is by using a <tt>UITableViewController</tt> class rather than working with a <tt>UITableView</tt> directly. However, this is not always practical - particularly when adding a refresh control to an existing table view, with an existing class hierarchy.
  */
-@interface RCRTableViewRefreshController : UIRefreshControl
+@interface RCRRefreshControl : UIRefreshControl
 
 /**
  Designated initializer.

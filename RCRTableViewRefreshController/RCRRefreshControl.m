@@ -1,13 +1,13 @@
 //
-//  RCRTableViewRefreshController.m
+//  RCRRefreshControl.m
 //
 //  Created by Rich Robinson on 02/08/2014.
 //  Copyright (c) 2014 Rich Robinson. All rights reserved.
 //
 
-#import "RCRTableViewRefreshController.h"
+#import "RCRRefreshControl.h"
 
-@implementation RCRTableViewRefreshController
+@implementation RCRRefreshControl
 
 - (instancetype)initWithTableView:(UITableView *)tableView refreshHandler:(void (^) ())refreshHandler {
     self = [super init];

@@ -1,6 +1,6 @@
 //
-//  RCRTableViewRefreshControllerSampleTests.m
-//  RCRTableViewRefreshControllerSampleTests
+//  RCRRefreshControlSampleTests.m
+//  RCRRefreshControlSampleTests
 //
 //  Created by Rich Robinson on 23/08/2014.
 //  Copyright (c) 2014 Rich Robinson. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface RCRTableViewRefreshControllerSampleTests : XCTestCase
+@interface RCRRefreshControlSampleTests : XCTestCase
 
 @end
 
-@implementation RCRTableViewRefreshControllerSampleTests
+@implementation RCRRefreshControlSampleTests
 
 - (void)setUp {
     [super setUp];

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6736B1DB19A88C13005070CB /* RCRTableViewRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736B1DA19A88C13005070CB /* RCRTableViewRefreshController.m */; };
+		6736B1DB19A88C13005070CB /* RCRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736B1DA19A88C13005070CB /* RCRRefreshControl.m */; };
 		679A633D19A88A84005841DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A633C19A88A84005841DD /* main.m */; };
 		679A634019A88A84005841DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A633F19A88A84005841DD /* AppDelegate.m */; };
 		679A634319A88A84005841DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A634219A88A84005841DD /* ViewController.m */; };
 		679A634619A88A84005841DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679A634419A88A84005841DD /* Main.storyboard */; };
 		679A634819A88A84005841DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679A634719A88A84005841DD /* Images.xcassets */; };
 		679A635419A88A85005841DD /* RCRTableViewRefreshControllerSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A635319A88A85005841DD /* RCRTableViewRefreshControllerSampleTests.m */; };
+		E5E2C9E01A16164C00D90500 /* UIViewController+RCRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2C9DF1A16164C00D90500 /* UIViewController+RCRRefreshControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6736B1D919A88C13005070CB /* RCRTableViewRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRTableViewRefreshController.h; sourceTree = "<group>"; };
-		6736B1DA19A88C13005070CB /* RCRTableViewRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRTableViewRefreshController.m; sourceTree = "<group>"; };
+		6736B1D919A88C13005070CB /* RCRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRRefreshControl.h; sourceTree = "<group>"; };
+		6736B1DA19A88C13005070CB /* RCRRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRRefreshControl.m; sourceTree = "<group>"; };
 		679A633719A88A84005841DD /* RCRTableViewRefreshControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCRTableViewRefreshControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679A633B19A88A84005841DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		679A633C19A88A84005841DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,6 +42,8 @@
 		679A634D19A88A85005841DD /* RCRTableViewRefreshControllerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCRTableViewRefreshControllerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		679A635219A88A85005841DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		679A635319A88A85005841DD /* RCRTableViewRefreshControllerSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRTableViewRefreshControllerSampleTests.m; sourceTree = "<group>"; };
+		E5E2C9DE1A16164C00D90500 /* UIViewController+RCRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RCRRefreshControl.h"; sourceTree = "<group>"; };
+		E5E2C9DF1A16164C00D90500 /* UIViewController+RCRRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RCRRefreshControl.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,21 +64,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6736B1D819A88C13005070CB /* RCRTableViewRefreshController */ = {
+		6736B1D819A88C13005070CB /* RCRRefreshControl */ = {
 			isa = PBXGroup;
 			children = (
-				6736B1D919A88C13005070CB /* RCRTableViewRefreshController.h */,
-				6736B1DA19A88C13005070CB /* RCRTableViewRefreshController.m */,
+				6736B1D919A88C13005070CB /* RCRRefreshControl.h */,
+				6736B1DA19A88C13005070CB /* RCRRefreshControl.m */,
+				E5E2C9DE1A16164C00D90500 /* UIViewController+RCRRefreshControl.h */,
+				E5E2C9DF1A16164C00D90500 /* UIViewController+RCRRefreshControl.m */,
 			);
-			name = RCRTableViewRefreshController;
+			name = RCRRefreshControl;
 			path = ../RCRTableViewRefreshController;
 			sourceTree = "<group>";
 		};
 		679A632E19A88A84005841DD = {
 			isa = PBXGroup;
 			children = (
-				6736B1D819A88C13005070CB /* RCRTableViewRefreshController */,
-				679A633919A88A84005841DD /* RCRTableViewRefreshControllerSample */,
+				6736B1D819A88C13005070CB /* RCRRefreshControl */,
+				679A633919A88A84005841DD /* RCRRefreshControlSample */,
 				679A635019A88A85005841DD /* RCRTableViewRefreshControllerSampleTests */,
 				679A633819A88A84005841DD /* Products */,
 			);
@@ -90,7 +95,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		679A633919A88A84005841DD /* RCRTableViewRefreshControllerSample */ = {
+		679A633919A88A84005841DD /* RCRRefreshControlSample */ = {
 			isa = PBXGroup;
 			children = (
 				679A633E19A88A84005841DD /* AppDelegate.h */,
@@ -101,6 +106,7 @@
 				679A634719A88A84005841DD /* Images.xcassets */,
 				679A633A19A88A84005841DD /* Supporting Files */,
 			);
+			name = RCRRefreshControlSample;
 			path = RCRTableViewRefreshControllerSample;
 			sourceTree = "<group>";
 		};
@@ -229,10 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E2C9E01A16164C00D90500 /* UIViewController+RCRRefreshControl.m in Sources */,
 				679A634319A88A84005841DD /* ViewController.m in Sources */,
 				679A634019A88A84005841DD /* AppDelegate.m in Sources */,
 				679A633D19A88A84005841DD /* main.m in Sources */,
-				6736B1DB19A88C13005070CB /* RCRTableViewRefreshController.m in Sources */,
+				6736B1DB19A88C13005070CB /* RCRRefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

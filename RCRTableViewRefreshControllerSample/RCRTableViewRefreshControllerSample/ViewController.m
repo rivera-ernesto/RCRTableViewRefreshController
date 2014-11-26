@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  RCRTableViewRefreshControllerSample
+//  RCRRefreshControlSample
 //
 //  Created by Rich Robinson on 23/08/2014.
 //  Copyright (c) 2014 Rich Robinson. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "RCRTableViewRefreshController.h"
+#import "RCRRefreshControl.h"
 
 NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
 
@@ -20,7 +20,7 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
 @property (nonatomic, strong) NSMutableArray *data;
 
 // Here's our refresh controller
-@property (nonatomic, strong) RCRTableViewRefreshController *refreshController;
+@property (nonatomic, strong) RCRRefreshControl *refreshController;
 
 @end
 
@@ -37,7 +37,7 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellReuseIdentifier];
     
     // Setup our refresh controller, with our table view and some code to perform when the user pulls down
-    self.refreshController = [[RCRTableViewRefreshController alloc] initWithTableView:self.tableView refreshHandler:^{
+    self.refreshController = [[RCRRefreshControl alloc] initWithTableView:self.tableView refreshHandler:^{
         // Act on the request to refresh the table view
         [self refreshData];
     }];
@@ -62,14 +62,12 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
 
 - (void)dataHasRefreshed {
     // Ensure we're on the main queue as we'll be updating the UI (not strictly necessary for this example, but will likely be essential in less trivial scenarios and so is included for illustrative purposes)
-    dispatch_async(dispatch_get_main_queue(), ^{
-
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // At some point later, when we're done getting our new data, tell our refresh controller to end refreshing
         [self.refreshController endRefreshing];
         
         // Finally get the table view to reload its data
         [self.tableView reloadData];
-        
     });
 }
 
