@@ -15,17 +15,12 @@
 @interface RCRRefreshControl : UIRefreshControl
 
 /**
- Designated initializer.
+ The corresponding table view.
  
- @param tableView The <tt>UITableView</tt> to be augmented with a <tt>UIRefreshControl</tt>.
- @param refreshHandler A block to be executed when the refresh control is activated.
+ @param tableView The <tt>UITableView</tt> to be augmented with a UIRefreshControl.
  */
-- (instancetype)initWithTableView:(UITableView *)tableView refreshHandler:(void (^) ())refreshHandler /*NS_DESIGNATED_INITIALIZER*/;
 
-/**
- A block to be executed when the refresh control is activated.
- */
-@property (nonatomic, copy) void (^refreshHandler) ();
+@property (nonatomic, weak) IBOutlet UITableView * tableView;
 
 @end
 

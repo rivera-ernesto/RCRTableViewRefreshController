@@ -37,10 +37,9 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellReuseIdentifier];
     
     // Setup our refresh controller, with our table view and some code to perform when the user pulls down
-    self.refreshController = [[RCRRefreshControl alloc] initWithTableView:self.tableView refreshHandler:^{
-        // Act on the request to refresh the table view
-        [self refreshData];
-    }];
+    self.refreshController = [RCRRefreshControl new];
+    self.refreshController.tableView = self.tableView;
+    [self.refreshController addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - Data refreshing
