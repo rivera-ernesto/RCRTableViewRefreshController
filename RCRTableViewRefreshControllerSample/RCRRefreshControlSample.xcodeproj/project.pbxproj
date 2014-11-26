@@ -27,8 +27,6 @@
 		679A634219A88A84005841DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		679A634519A88A84005841DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		679A634719A88A84005841DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E5E2C9DE1A16164C00D90500 /* UIViewController+RCRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RCRRefreshControl.h"; sourceTree = "<group>"; };
-		E5E2C9DF1A16164C00D90500 /* UIViewController+RCRRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RCRRefreshControl.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +45,6 @@
 			children = (
 				6736B1D919A88C13005070CB /* RCRRefreshControl.h */,
 				6736B1DA19A88C13005070CB /* RCRRefreshControl.m */,
-				E5E2C9DE1A16164C00D90500 /* UIViewController+RCRRefreshControl.h */,
-				E5E2C9DF1A16164C00D90500 /* UIViewController+RCRRefreshControl.m */,
 			);
 			name = RCRRefreshControl;
 			path = ../RCRTableViewRefreshController;

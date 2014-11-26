@@ -20,7 +20,7 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
 @property (nonatomic, strong) NSMutableArray *data;
 
 // Here's our refresh controller
-@property (nonatomic, strong) RCRRefreshControl *refreshController;
+@property (nonatomic, weak) RCRRefreshControl *refreshControl;
 
 @end
 
@@ -37,9 +37,10 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellReuseIdentifier];
     
     // Setup our refresh controller, with our table view and some code to perform when the user pulls down
-    self.refreshController = [RCRRefreshControl new];
-    self.refreshController.tableView = self.tableView;
-    [self.refreshController addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    RCRRefreshControl * refreshControl = [RCRRefreshControl new];
+    refreshControl.tableView = self.tableView;
+    [refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
 }
 
 #pragma mark - Data refreshing
@@ -63,7 +64,7 @@ NSString *const TableViewCellReuseIdentifier = @"TableViewCellReuseIdentifier";
     // Ensure we're on the main queue as we'll be updating the UI (not strictly necessary for this example, but will likely be essential in less trivial scenarios and so is included for illustrative purposes)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // At some point later, when we're done getting our new data, tell our refresh controller to end refreshing
-        [self.refreshController endRefreshing];
+        [self.refreshControl endRefreshing];
         
         // Finally get the table view to reload its data
         [self.tableView reloadData];
